@@ -32,7 +32,7 @@ public class CarMovement : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("hi");
+        /*Debug.Log("hi");*/
         rb = GetComponentInParent<Rigidbody>();
         
         acceleration = carInfo.acceleration;
