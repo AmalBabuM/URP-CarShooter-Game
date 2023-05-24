@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform enemyFirePoint;
     bool isAlive = true;
     private Transform player;
+    public BulletPool bulletPool;
 
     private void Start()
     {
@@ -33,11 +34,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
     private IEnumerator EnemyFire()
     {
         yield return new WaitForSeconds(timeInterval);
-        GameObject bullet = BulletPool.instance.GetPooledObject();
+        GameObject bullet = bulletPool.GetPooledObject();
         if (bullet != null&&isAlive)
         {
             bullet.transform.position = enemyFirePoint.position;

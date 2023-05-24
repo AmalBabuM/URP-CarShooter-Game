@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RoadManager : MonoBehaviour
 {
-    public GameObject[] tilePrefabs;
     private Transform playerTransform;
     private float spawnZ = -10.0f;
     private float tileLength = 60.0f;
@@ -13,12 +12,11 @@ public class RoadManager : MonoBehaviour
 
     public RoadPool roadPool;
 
-    private List<GameObject> activeTile;
+    /*private List<GameObject> activeTile;*/
     private int lastPrefabIndex = 0;
-    // Start is called before the first frame update
     void Start()
     {
-        activeTile = new List<GameObject>();
+        /*activeTile = new List<GameObject>();*/
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         for (int i = 0; i < tileOnScreen; i++)
         {
@@ -53,18 +51,15 @@ public class RoadManager : MonoBehaviour
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
         spawnZ += tileLength;
-        activeTile.Add(go);
+       /* activeTile.Add(go);*/
     }
     void DeleteTile()
     {
-        //Destroy(activeTile[0]);
-        //activeTile.RemoveAt(0);
-
         roadPool.DisableRoad();
     }
-    int RandomPrefabIndex()
+    /*int RandomPrefabIndex()
     {
-        if (tilePrefabs.Length <= 1)
+       *//* if (tilePrefabs.Length <= 1)*//*
 
             return 0;
         int randomIndex = lastPrefabIndex;
@@ -73,6 +68,6 @@ public class RoadManager : MonoBehaviour
             randomIndex = Random.Range(0, tilePrefabs.Length);
         }
         lastPrefabIndex = randomIndex;
-        return randomIndex;
-    }
+        return randomIndex;*//*
+    }*/
 }

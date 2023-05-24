@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-    public static BulletPool instance;
+    /*public static BulletPool instance;*/
 
     private List<GameObject> pooledObjects = new List<GameObject>();
-    private int amountToPool = 20;
+    private int amountToPool = 30;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletParent;
-    private void Awake()
+    /*private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
-    }
+    }*/
     
     void Start()
     {

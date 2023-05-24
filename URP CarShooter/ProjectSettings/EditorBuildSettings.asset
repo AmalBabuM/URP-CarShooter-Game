@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Splash Scene.unity
+    guid: 7bb71f70ff7dd884e85db922216aac73
+  - enabled: 1
+    path: Assets/Scenes/Gun Selection.unity
+    guid: 47c53e57bbcb62d4490fdaeee82723f4
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
